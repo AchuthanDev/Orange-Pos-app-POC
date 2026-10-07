@@ -12,21 +12,23 @@ final authProvider =
   AuthNotifier.new,
 );
 
-class AuthNotifier extends Notifier<LoginSession?> {
+
+class AuthNotifier extends Notifier<LoginSession?>{
   @override
   LoginSession? build() {
     return null;
   }
 
-  void loginWithQr(String qrData) {
+
+ void loginWithQr(String qrData) {
     final loginWithQr = ref.read(
       loginWithQrProvider,
     );
 
     state = loginWithQr(qrData);
-  }
+}
 
-  void logout() {
-    state = null;
-  }
+void logout(){
+  state = null;
+}
 }

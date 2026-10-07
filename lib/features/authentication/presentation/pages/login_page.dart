@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../widgets/login_header.dart';
+import '../widgets/qr_login_button.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -11,21 +14,14 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'Login',
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            const LoginHeader(),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 24),
 
-            ElevatedButton(
+            QrLoginButton(
               onPressed: () {
                 context.push('/login/qr');
               },
-              child: const Text('Scan QR Code'),
             ),
           ],
         ),

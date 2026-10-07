@@ -1,9 +1,7 @@
 import '../entities/login_session.dart';
 
-class LoginWithQr {
-  LoginSession call(String qrData) {
-    return LoginSession(
-      qrData: qrData,
-    );
+class LoginWithQr{
+  LoginSession call(String qrData){
+    return LoginSession(qrdata: qrData);
   }
 }

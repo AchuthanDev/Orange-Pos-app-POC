@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../../features/authentication/presentation/pages/login_page.dart';
 
 import '../../features/home/presentation/pages/home_page.dart';
-import '../../features/camera/presentation/pages/camera_page.dart';
+
 import '../../features/authentication/presentation/pages/qr_scanner_page.dart';
 
 final GoRouter router = GoRouter(
@@ -29,14 +29,7 @@ final GoRouter router = GoRouter(
         return const HomePage();
 
       },
-     routes: [
-        GoRoute(
-          path: 'camera',
-          builder: (context, state) {
-            return const CameraPage();
-          },
-        ),
-      ],
+    
     ),
   ],
 );
